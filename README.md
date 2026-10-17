@@ -1,6 +1,6 @@
 # Détection d'anomalies multivariée par IA — Catalogue Bottleneck
 
-**Projet 11 — Pilotez un projet data augmenté par l'IA** · Parcours Business Intelligence Analyst (RNCP37837, niveau 6) · Septembre 2026
+**Pilotez un projet data augmenté par l'IA** · Parcours Business Intelligence Analyst (RNCP37837, niveau 6) · Septembre 2026
 **Aurélie Dupassieux** — [adupassieux-arch.github.io](https://adupassieux-arch.github.io)
 
 > **In short (EN):** an AI-driven, documented upgrade of an earlier stock & sales analysis for an online wine merchant. Univariate outlier detection (Z-score / IQR on price) is complemented by a multivariate **Isolation Forest** on price, purchase price, stock, sales and margin. The model surfaces **16 anomalies invisible to the univariate approach**, tested for stability (96.9 % between seeds) and sensitivity, then reviewed product by product to separate a warning signal (slow-moving premium Champagne stock) from a positive one (high-margin, high-velocity entry-level wines).
