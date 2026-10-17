@@ -1,4 +1,4 @@
-# Détection d'anomalies multivariée par IA — Catalogue Bottleneck
+# Détection d'anomalies multivariée — Catalogue d'un caviste en ligne
 
 **Pilotez un projet data augmenté par l'IA** · Parcours Business Intelligence Analyst (RNCP37837, niveau 6) · Septembre 2026
 **Aurélie Dupassieux** — [adupassieux-arch.github.io](https://adupassieux-arch.github.io)
@@ -80,4 +80,4 @@ Les fichiers sources (`erp.xlsx`, `web.xlsx`, `liaison.xlsx`) sont fournis par O
 
 ---
 
-*Projets liés : [Projet 6 — Analyse du stock et des ventes](https://github.com/adupassieux-arch/analyse-stock-ventes) · [Dashboard interactif Bottleneck](https://adupassieux-arch.github.io/dashboard/)*
+*Projets liés : [Projet 6 — Analyse du stock et des ventes](https://github.com/adupassieux-arch/analyse-stock-ventes) · [Dashboard interactif stock & ventes](https://adupassieux-arch.github.io/dashboard/)*
