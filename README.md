@@ -74,7 +74,7 @@ Ces deux lectures, qu'un score d'anomalie unique aurait confondues, sont transmi
 | [`docs/documentation_demarche.pdf`](docs/documentation_demarche.pdf) | Documentation de la démarche : veille, cahier des charges, organisation, tests, résultats, limites, décisions |
 | [`docs/soutenance.pdf`](docs/soutenance.pdf) | Support de soutenance |
 
-Les fichiers sources (`erp.xlsx`, `web.xlsx`, `liaison.xlsx`) sont fournis par OpenClassrooms et ne sont pas redistribués ici. Pour réexécuter le notebook, placez-les à côté du fichier `.ipynb`.
+Les fichiers sources (`erp.xlsx`, `web.xlsx`, `liaison.xlsx`) sont fournis dans le cadre de la formation et ne sont pas redistribués ici. Pour réexécuter le notebook, placez-les à côté du fichier `.ipynb`.
 
 **Outils :** Python · pandas · scikit-learn · matplotlib · seaborn · Jupyter
 
