@@ -13,7 +13,7 @@ Bottleneck est un caviste en ligne (client fictif). Le livrable de départ — l
 
 **Angle mort identifié :** cette détection est **univariée** et ne porte que sur le prix. Une anomalie métier — marge incohérente, stock dormant sur une référence premium — peut ne pas être atypique sur une seule variable, mais le devenir quand plusieurs variables sont observées ensemble.
 
-**Mission :** améliorer le livrable de façon critique et documentée grâce à l'IA, en l'utilisant comme un levier testé, pas comme une boîte noire.
+**Mission :** améliorer le livrable de façon critique et documentée grâce à l'IA, en l'utilisant comme un levier testé et vérifié avant d'être adopté.
 
 Démarche inspirée d'un [cas publié par Walmart Labs](https://arxiv.org/abs/1902.09566) sur la détection d'anomalies de prix en e-commerce.
 
@@ -48,6 +48,8 @@ Sources : R. Rakotomalala (Université Lyon 2), Ramakrishnan et al. *Anomaly Det
 | **Détectées par Isolation Forest uniquement** | **16** |
 | Stabilité entre deux graines | 31 / 32 identiques (**96,9 %**) |
 | Sensibilité (3 % / 5 % / 8 %) | 22 / 36 / 57 anomalies — progression cohérente |
+| Z-score sur prix logarithmé (étape 5.8) | 2 produits (contre 13 en brut) — l'asymétrie du prix passe de 2,60 à 0,28 |
+| Produits signalés à chaque exécution (10 graines) | 28 / 32 — cas prioritaires |
 
 **Lecture métier des 16 anomalies nouvelles :**
 
@@ -64,13 +66,14 @@ Ces deux lectures, qu'un score d'anomalie unique aurait confondues, sont transmi
 
 - Un seul mois de données (octobre) : une rotation nulle peut refléter une saisonnalité.
 - Taux de contamination calibré par alignement sur l'IQR, pas sur un objectif métier propre (ex. capacité de revue de l'équipe vente).
+- Après l'évaluation, les réglages ont été testés (étape 5.8) : les listes d'anomalies sont emboîtées selon le taux de contamination, qui ne fixe que le nombre de cas à revoir ; 500 arbres sont un peu plus stables que 200 (indice de Jaccard 0,90 contre 0,88).
 - Isolation Forest ne fournit pas d'importance des variables : l'interprétation passe par la comparaison des profils moyens (prochaine piste : SHAP).
 
 ## Contenu du dépôt
 
 | Fichier | Description |
 |---|---|
-| [`notebook_bottleneck_anomalies_ia.ipynb`](notebook_bottleneck_anomalies_ia.ipynb) | Notebook complet : nettoyage, analyses univariées et multivariées, Isolation Forest (étape 5.7), tests de robustesse |
+| [`notebook_bottleneck_anomalies_ia.ipynb`](notebook_bottleneck_anomalies_ia.ipynb) | Notebook complet : nettoyage, analyses univariées et multivariées, Isolation Forest (étape 5.7), tests de robustesse, affinage des réglages et Z-score logarithmé (étape 5.8) |
 | [`docs/documentation_demarche.pdf`](docs/documentation_demarche.pdf) | Documentation de la démarche : veille, cahier des charges, organisation, tests, résultats, limites, décisions |
 | [`docs/soutenance.pdf`](docs/soutenance.pdf) | Support de soutenance |
 
